@@ -1,7 +1,7 @@
 # Python Dersleri 44 - REGEX
 
 
-## Python Regex Özet Tablo (Cheat Sheet)
+### Python Regex Özet Tablo (Cheat Sheet)
 
 | Özellik / Desen      | Açıklama                                                                    | Örnek                  |
 |----------------------|-----------------------------------------------------------------------------|------------------------|
