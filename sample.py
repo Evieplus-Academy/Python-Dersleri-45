@@ -4,9 +4,9 @@ with open("sample.txt", "r", encoding="utf-8") as file:
     text = file.read()
 
 pattern = re.compile(r'\b[Uu][Ff][Oo]\b')
-text_sansurlu = pattern.sub("SANSÜRLÜ", text)
+text_censored = pattern.sub("SANSÜRLÜ", text)
 
-with open("sample_sansurlu.txt", "w", encoding="utf-8") as file:
-    file.write(text_sansurlu)
+with open("sample_censored.txt", "w", encoding="utf-8") as file:
+    file.write(text_censored)
 
-print("'sample_sansurlu.txt' dosyası oluşturuldu.")
+print("'sample_censored.txt' dosyası oluşturuldu.")
