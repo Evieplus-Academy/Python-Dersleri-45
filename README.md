@@ -21,4 +21,4 @@
 | `?`                  | Önceki karakterin sıfır veya bir kez tekrarıyla eşleşir                     | `ab?c` -> "ac", "abc"  |
 | `{m,n}`              | Önceki karakterin en az m ve en fazla n kez tekrarıyla eşleşir              | `a{2,4}` -> "aa", "aaa", "aaaa" |
 | `()`                 | Gruplama için kullanılır, içindeki desenleri bir grup olarak işler          | `(ab)+` -> "ab", "abab"|
-| `\|`                 | Alternatif desenleri belirtir, `|` ile ayrılan desenlerden herhangi bir
+| `\|`                 | Alternatif desenleri belirtir, `\|` ile ayrılan desenlerden herhangi biriyle eşleşir | `a|b` -> "a", "b" |
