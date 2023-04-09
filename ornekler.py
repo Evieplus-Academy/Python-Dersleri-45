@@ -1,14 +1,23 @@
 import re
 
 
-pattern = r"[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-text = "FERHAT.MOUSAVI@GMAIL.COM john.doe@example.com, jane_doe@example.co.uk, invalid-email@.com"
+pattern = r"[a-zA-Z0-9._]+@[a-zA-Z0-9-.]+\.[a-zA-Z]{2,}"
+text = "ferhat.mousavi@gmail.com ezgi_OZGUR@gmail.COM Serkan.Bayram@.com john.carter1998@google.co.uk hasan.bayrakli@mail.company.com.tr"
 
-valid_emails = re.findall(pattern, text)
-print(valid_emails)
+matches = re.findall(pattern, text)
+print(matches)
 
-pattern = r"\+?\d{0,2}\s?\(?\d{3,4}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}[-\s]?"
-text = "05336659992, 0533 665 99 92, +90 533 665 99 92, 533 665 99 92, 533-665-99-92, (533)665-99-92"
 
-phones = re.findall(pattern, text)
-print(phones)
+pattern = r"\b\d{2}[.-]\d{2}[.-]\d{4}\b"
+text = "Bugün 09.04.2023. Yarın 10-04-2023."
+
+matches = re.finditer(pattern, text)
+for match in matches:
+    print(match.group())
+
+pattern = r"\(?\d{3}[)-]-?\d{3}-?\d{2}-?\d{2}"
+phone_pattern = re.compile(pattern)
+text = "555-4327645, 533-543-88-22, (533)6659992, (543)-876-99-92, 5425424242"
+
+matches = phone_pattern.findall(text)
+print(matches)
