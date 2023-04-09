@@ -1,10 +1,28 @@
 import re
 
-pattern1 = "^abc"
-pattern2 = "abc$"
-pattern3 = r"abc\b"
-pattern4 = r"\Babc"
-text = "abc abcdef defabc abcdef abc123 123abc abc"
 
-matches = re.findall(pattern4, text)
+pattern = "^[a-f]bc"
+text = "fbc bca abc"
+
+matches = re.findall(pattern, text)
+print(matches)
+
+pattern = "[a-f]bc$"
+text = "fbc bca abc"
+
+matches = re.findall(pattern, text)
+print(matches)
+
+
+pattern = r"\b[a-f]b+c\b"
+text = "fbc dbcc abbbbbc babca ggebc abc"
+
+matches = re.findall(pattern, text)
+print(matches)
+
+
+pattern = r"\B[a-f]b+c\B"
+text = "fbc dbcc abbbbbc babca ggebc abc"
+
+matches = re.findall(pattern, text)
 print(matches)
