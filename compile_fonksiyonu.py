@@ -1,21 +1,16 @@
 import re
 
-raw_pattern = "abc"
-pattern = re.compile(raw_pattern)
 
-text = "abc bca 123 xyz abc fgh"
+pattern = r"\b\w+\b"
+word_count_pattern = re.compile(pattern)
+text1 = "Python öğrenmek çok kolaydır. Program yazmak daha da kolaydır."
+text2 = "C++ ile gömülü sistemler için kod yazılır."
 
-matches = pattern.findall(text)
-print(matches)
+matches = word_count_pattern.findall(text1)
+print(len(matches))
+matches = word_count_pattern.findall(text2)
+print(len(matches))
 
-text = "kabcf abcfgh abc"
-match = pattern.search(text)
-print(match.start())
-
-text = "kdjfhgjfabcjdhf jfjfkd"
-text = pattern.sub(" ", text)
-print(text)
-
-text = "adlkfladkhfabcsldkfjweıabcdflksdjfabc"
-result = pattern.split(text)
-print(result)
+matches = word_count_pattern.finditer(text1)
+for match in matches:
+    print(match)
