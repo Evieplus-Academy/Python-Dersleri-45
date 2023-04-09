@@ -1,16 +1,50 @@
 import re
 
-pattern1 = "a.c"
-pattern2 = "a*c"
-pattern3 = "a+c"
-pattern4 = "a?c"
-pattern5 = "a{0,1}c"
-pattern6 = "a[f-z]c"
-pattern7 = "a[^f-z]c"
-pattern8 = "a[^f-z]c|a{0,1}c"
-pattern9 = "(ab){1,3}"
-text = "abc aafb a$caaa!c ba3c aacxd abababcc baabaaca8c"
+pattern = ".er.a."
+text = "ezgi, ferhat, serkan, ferhat, büşra ve serhat"
 
-matches = re.findall(pattern9, text)
+matches = re.findall(pattern, text)
 print(matches)
 
+pattern = "ab*c"    # ac abc abbc abbbc abbbbc ...
+text = "asd abc ac abbc abbbbc xdfrg rgfd abbbc"
+
+matches = re.findall(pattern, text)
+print(matches)
+
+pattern = "ab+c"    # abc abbc abbbc abbbbc ...
+text = "asd abc ac abbc abbbbc xdfrg rgfd abbbc"
+
+matches = re.findall(pattern, text)
+print(matches)
+
+pattern = "ab?c"    # ac abc
+text = "asd abc ac abbc abbbbc xdfrg rgfd abbbc"
+
+matches = re.findall(pattern, text)
+print(matches)
+
+pattern = "ab{1,3}c"
+text = "asd abc ac abbc abbbbc xdfrg rgfd abbbc"
+
+matches = re.findall(pattern, text)
+print(matches)
+
+pattern = "ab[a-fA-Fç]c"
+text = "asd abc ac abbc abbbbc abEc abçc xdfrg abfc rgfd abbbc abac abcc"
+
+matches = re.findall(pattern, text)
+print(matches)
+
+pattern = "ab{1,3}c|ab[a-fA-Fç]c"
+text = "asd abc ac abbc abbbbc abEc abçc xdfrg abfc rgfd abbbc abac abcc"
+
+matches = re.findall(pattern, text)
+print(matches)
+
+
+pattern = "(ab)+c"  # abc ababc abababc
+text = "asd abc ababc abababc ac abbc abbbbc abEc abçc xdfrg abfc rgfd abbbc abac abcc"
+
+matches = re.findall(pattern, text)
+print(matches)
