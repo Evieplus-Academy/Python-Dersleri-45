@@ -1,4 +1,4 @@
-# Python Dersleri 44 - REGEX
+# Python Dersleri 45 - REGEX
 
 İlgili dersin linki [Python Dersleri- 45 - REGEX (REGULAR EXPRESSION) (2023)](https://youtu.be/V3Jr2sAHNno)
 
