@@ -1,6 +1,6 @@
 # Python Dersleri 44 - REGEX
 
-İlgili dersin linki [Python Dersleri- 44 - REGEX (REGULAR EXPRESSION) (2023)](https://youtu.be/V3Jr2sAHNno)
+İlgili dersin linki [Python Dersleri- 45 - REGEX (REGULAR EXPRESSION) (2023)](https://youtu.be/V3Jr2sAHNno)
 
 
 ### Python Regex Özet Tablo (Cheat Sheet)
